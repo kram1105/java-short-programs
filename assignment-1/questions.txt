@@ -1,0 +1,5 @@
+1 - Read from a file named input.txt and print it's content.
+2 - Read from a file and copy it's content in another file called output.txt .
+3 - Write a program to add numbers. Numbers are given in a file with comma separated.
+4 - Write a program for two matrix addition, subtraction and multiplication.
+5 - Write a program to find the intersection of two files.
