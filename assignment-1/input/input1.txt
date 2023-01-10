@@ -1,2 +1,10 @@
-This is a simple input file. We have to print the content of this file on console.
-If you print this file, congratulations you are learning java.
+ABC
+EFG
+DEF
+FHY
+FGTW
+FILE
+JAVA
+IJH
+HYU
+YES

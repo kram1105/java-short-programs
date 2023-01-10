@@ -3,6 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Objects;
 
 // Read from a file and write it's content to an output file
 // Step 1 - write a function to get file content
@@ -23,6 +24,10 @@ public class Question2 {
     private static void writeInFile(String inputFileName, String outputFilePath) {
         try {
             String fileContent = getFileContent(inputFileName);
+            if (Objects.isNull(fileContent) || fileContent.isBlank()) {
+                System.out.println("File is empty.");
+                return;
+            }
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(outputFilePath));
             bufferedWriter.write(fileContent);
             bufferedWriter.close();
@@ -33,8 +38,19 @@ public class Question2 {
     }
 
     public static void main(String[] args) {
-        String inputFileName = "input/input1.txt";
+        // Input File is present
+        String inputFileName = "input/input.txt";
         String outputFileName = "output.txt";
         writeInFile(inputFileName, outputFileName);
+
+        // Input file is not present
+        String missingInputFileName = "missing-input.txt";
+        String missingOutputFileName = "missing-output.txt";
+        writeInFile(missingInputFileName, missingOutputFileName);
+
+        // Input File is empty
+        String emptyInputFileName = "input/empty-file.txt";
+        String emptyOutputFileName = "empty-output.txt";
+        writeInFile(emptyInputFileName, emptyOutputFileName);
     }
 }

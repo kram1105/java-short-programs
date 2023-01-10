@@ -28,10 +28,10 @@ public class Question1 {
     public static void main(String[] args) {
         System.out.println("Working Directory = " + System.getProperty("user.dir"));
         // When input file exists
-        String fileName = "./input/input1.txt";
+        String fileName = "input/input.txt";
         readAndPrintFile(fileName);
 
         // When input file is not present
-        readAndPrintFile("input.txt");
+        readAndPrintFile("missing-input.txt");
     }
 }
